@@ -1,0 +1,31 @@
+{
+  "name": "viethealthy-dashboard",
+  "version": "1.0.0",
+  "description": "VietHealthy dashboard product management",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "next dev",
+    "d4": "dev -p 4040",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pdhung197/viethealthyDashboard.git"
+  },
+  "keywords": [
+    "viethealthy"
+  ],
+  "author": "PDHUNG",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pdhung197/viethealthyDashboard/issues"
+  },
+  "homepage": "https://github.com/pdhung197/viethealthyDashboard#readme",
+  "dependencies": {
+    "next": "^9.4.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
