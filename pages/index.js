@@ -1,22 +1,23 @@
-import React from 'react';
 import { connect } from 'react-redux';
+import Link from 'next/link';
+
+import SecurePage from './../hocs/securePage';
+
 import { decrementCounter, incrementCounter } from '../redux/actions/counter.actions';
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
-    return (
-      <div>
-        <button onClick={this.props.incrementCounter}>Increment</button>
-        <button onClick={this.props.decrementCounter}>Decrement</button>
-        <h1>{this.props.counter}</h1>
-      </div>
-    );
-  }
+function Home(props) {
+  return (
+    <div>
+      <button onClick={props.incrementCounter}>Increment</button>
+      <button onClick={props.decrementCounter}>Decrement</button>
+      <h1>{props.counter}</h1>
+      <Link href="/login">
+        <a>Login</a>
+      </Link>
+    </div>
+  );
 }
+
 
 const mapStateToProps = state => ({
   counter: state.counter.value
@@ -27,4 +28,4 @@ const mapDispatchToProps = {
   decrementCounter: decrementCounter,
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(SecurePage(Home));
