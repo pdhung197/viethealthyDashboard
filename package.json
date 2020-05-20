@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "next dev",
-    "d4": "next dev -- -p 4040",
+    "dev": "node server.js",
     "build": "next build",
-    "start": "next start",
+    "start": "NODE_ENV=production node server.js",
+    "d4": "next dev -- -p 4040",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
@@ -26,9 +26,11 @@
   },
   "homepage": "https://github.com/pdhung197/viethealthyDashboard#readme",
   "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
     "lodash": "^4.17.15",
     "next": "^9.4.1",
-    "next-redux-wrapper": "^6.0.0",
+    "next-i18next": "^4.4.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-redux": "^7.2.0",
