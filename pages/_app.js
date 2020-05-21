@@ -1,6 +1,7 @@
 import App from 'next/app';
 import { Provider } from 'react-redux';
 import React from 'react';
+import { appWithTranslation } from '../i18n'
 
 import withReduxStore from './../hocs/with-redux-store';
 
@@ -11,7 +12,10 @@ class MyApp extends App {
         const pageProps = Component.getInitialProps ? await Component.getInitialProps(ctx) : {};
 
         //Anything returned here can be accessed by the client
-        return { pageProps };
+        return {
+            pageProps,
+            namespacesRequired: ['common']
+        };
     }
 
     render() {
@@ -25,4 +29,4 @@ class MyApp extends App {
     }
 }
 
-export default withReduxStore(MyApp);
+export default withReduxStore(appWithTranslation(MyApp));
