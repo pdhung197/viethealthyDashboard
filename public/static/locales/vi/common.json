@@ -1,0 +1,7 @@
+{
+  "title": "Ví dụ đơn giản",
+  "change-locale": "Đổi ngôn ngữ",
+  "to-second-page": "Sang trang 2",
+  "error-with-status": "Lỗi {{statusCode}} từ server",
+  "error-without-status": "Đã có lỗi"
+}

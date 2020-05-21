@@ -17,15 +17,16 @@ const { localeSubpaths } = publicRuntimeConfig;
 const localeSubpathVariations = {
     none: {},
     foreign: {
-        de: 'de',
+        en: 'en',
     },
     all: {
+        vi: 'vi',
         en: 'en',
-        de: 'de',
     },
 }
 
 module.exports = new NextI18Next({
-    otherLanguages: ['de'],
+    defaultLanguage: 'vi',
+    otherLanguages: ['en'],
     localeSubpaths: localeSubpathVariations[localeSubpaths],
 })
