@@ -10,7 +10,7 @@ function Home(props) {
   return (
     <div>
       <h1>{props.t('title')}</h1>
-      <p>Ngôn ngữ hiện tại: {i18n.language}</p><br /><br /><br />
+
       <button
         type='button'
         onClick={() => i18n.changeLanguage(i18n.language === 'vi' ? 'en' : 'vi')}

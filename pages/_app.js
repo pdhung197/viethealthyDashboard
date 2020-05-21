@@ -1,7 +1,7 @@
 import App from 'next/app';
 import { Provider } from 'react-redux';
 import React from 'react';
-import { appWithTranslation } from '../i18n'
+import { appWithTranslation, i18n } from '../i18n'
 
 import withReduxStore from './../hocs/with-redux-store';
 
@@ -14,7 +14,7 @@ class MyApp extends App {
         //Anything returned here can be accessed by the client
         return {
             pageProps,
-            namespacesRequired: ['common']
+            namespacesRequired: []
         };
     }
 
