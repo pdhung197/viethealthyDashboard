@@ -1,19 +1,17 @@
 import { connect } from 'react-redux';
 import Link from 'next/link';
-
 import { i18n, withTranslation } from '../i18n'
 
-import SecurePage from './../hocs/securePage';
-
-import Footer from './../components/Footer/Footer'
+import NonSecurePage from '../hocs/defaultPage';
 
 import { decrementCounter, incrementCounter } from '../redux/actions/counter.actions';
 
-function Home(props) {
+function About(props) {
   return (
     <div>
+      About Page
       <h1>{props.t('title')}</h1>
-
+      Form {props.t(`auth:loginType`)}
       <button
         type='button'
         onClick={() => i18n.changeLanguage(i18n.language === 'vi' ? 'en' : 'vi')}
@@ -23,19 +21,20 @@ function Home(props) {
       <button onClick={props.incrementCounter}>Increment</button>
       <button onClick={props.decrementCounter}>Decrement</button>
       <h1>{props.counter}</h1>
-      <Link href="/login">
-        <a>Login</a>
+      <Link href="/">
+        <a>Home</a>
       </Link>
-      <Link href="/about">
-        <a>About</a>
-      </Link>
-      <Footer />
+      <footer>
+        <p>
+          {props.t('footer:description')}
+        </p>
+      </footer>
     </div>
   );
 }
 
-Home.getInitialProps = async () => ({
-  namespacesRequired: ['common', 'second-page', 'footer'],
+About.getInitialProps = async () => ({
+  namespacesRequired: ['common', 'second-page', 'footer', 'auth'],
 })
 
 const mapStateToProps = state => ({
@@ -47,6 +46,6 @@ const mapDispatchToProps = {
   decrementCounter: decrementCounter,
 };
 
-const HomePage = SecurePage(withTranslation(['common', 'second-page', 'footer'])(Home));
+const AboutPage = NonSecurePage(withTranslation(['common', 'second-page', 'footer', 'auth'])(About));
 
-export default connect(mapStateToProps, mapDispatchToProps)(HomePage);
+export default connect(mapStateToProps, mapDispatchToProps)(AboutPage);

@@ -145,7 +145,11 @@ table {
   border-spacing: 0;
 }
 
-a {
+a,
+a:hover,
+a:focus,
+a:visited,
+a:active {
   text-decoration: none;
   color: unset;
 }

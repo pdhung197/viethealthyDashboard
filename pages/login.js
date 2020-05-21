@@ -1,16 +1,18 @@
-import Link from 'next/link'
-
 import NonSecureLayout from './../hocs/defaultPage'
+
+import UserForm from './../containers/UserForm/UserForm';
 
 function Login() {
     return (
-        <div>
-            Login form
-            <Link href="/">
-                <a>Home</a>
-            </Link>
-        </div>
+        <>
+            <UserForm
+            />
+        </>
     )
 }
+
+Login.getInitialProps = async () => ({
+    namespacesRequired: ['auth'],
+})
 
 export default NonSecureLayout(Login);

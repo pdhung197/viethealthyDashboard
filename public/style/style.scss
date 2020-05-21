@@ -3,7 +3,14 @@
 **SCSS
 ==========================================================*/
 
+@import "~bootstrap/scss/bootstrap";
+@import "./variables/commonVariables.scss";
 @import "./reset.scss";
+@import "./variables/animate.scss";
+
+html {
+  font-size: 62.5%;
+}
 
 html,
 body {
@@ -16,4 +23,14 @@ body {
   width: 100% !important;
   margin: 0 !important;
   padding: 0 !important;
+}
+
+main {
+  &.non-secure-main {
+    font-size: 1.6rem;
+    height: 100% !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
 }

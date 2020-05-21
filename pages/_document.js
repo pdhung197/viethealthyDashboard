@@ -1,6 +1,6 @@
 import React from 'react'
 import Document, { Head, Main, NextScript } from 'next/document'
-import { appWithTranslation, i18n } from '../i18n'
+import { i18n } from '../i18n'
 // ---------------------------------------------
 export default class CustomDocument extends Document {
     static async getInitialProps(ctx) {
