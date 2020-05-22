@@ -23,7 +23,7 @@ function Home(props) {
       <button onClick={props.incrementCounter}>Increment</button>
       <button onClick={props.decrementCounter}>Decrement</button>
       <h1>{props.counter}</h1>
-      <Link href="/login">
+      <Link href="/auth?type=login" as="/login">
         <a>Login</a>
       </Link>
       <Link href="/about">

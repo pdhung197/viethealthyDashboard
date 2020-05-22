@@ -1,11 +1,11 @@
 import NonSecureLayout from './../hocs/defaultPage'
 
-import UserForm from './../containers/UserForm/UserForm';
+import AuthForm from '../containers/AuthForm/AuthForm';
 
 function Login() {
     return (
         <>
-            <UserForm
+            <AuthForm
             />
         </>
     )

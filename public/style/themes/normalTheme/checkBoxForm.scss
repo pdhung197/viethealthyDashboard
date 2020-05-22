@@ -1,0 +1,52 @@
+/* Checkbox form styling */
+
+.checkbox-form {
+  &__group {
+    position: relative;
+    span {
+      width: 1.6rem;
+      height: 1.6rem;
+      border: 0.5px solid;
+      display: inline-block;
+      margin-right: 0.5rem;
+      position: relative;
+      top: 0.3rem;
+      @include themify($themes) {
+        border-color: themed("lightGrayColor");
+      }
+      @include transition(border-color 0.3s);
+      &::after {
+        content: "\2713";
+        position: absolute;
+        padding: 0;
+        top: -0.3rem;
+        left: 0.2rem;
+        @include transform(scale(0));
+        opacity: 0;
+        visibility: hidden;
+        @include transition(0.3s);
+      }
+    }
+    input {
+      width: 0;
+      height: 0;
+      opacity: 0;
+      visibility: hidden;
+      position: absolute;
+      &:checked {
+        + span {
+          @include themify($themes) {
+            border-color: themed("successBackgroundColor");
+          }
+          @include transition(border-color 0.3s);
+          &::after {
+            @include transform(scale(1.5));
+            opacity: 1;
+            visibility: visible;
+            @include transition(0.3s);
+          }
+        }
+      }
+    }
+  }
+}

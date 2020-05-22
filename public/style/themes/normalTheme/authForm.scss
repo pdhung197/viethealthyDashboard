@@ -1,0 +1,180 @@
+/* User form styling */
+@import "./../../variables/multithemes.scss";
+@import "./../../variables/commonVariables.scss";
+@import "./loginForm.scss";
+
+.auth-form {
+  /* height: 100% !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important; */
+  min-height: 100vh;
+  font-size: 1.4em;
+  @include themify($themes) {
+    color: themed("colorWithWarningBackground");
+  }
+  > div {
+    @include transition(0.3s);
+  }
+
+  &__back {
+    background: url("/images/login.svg") no-repeat center center;
+    > div {
+      position: absolute;
+      top: 0;
+      a {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  &__button {
+    background: unset;
+    border: none;
+    outline: none;
+    padding: 1rem 1.5rem;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    font-size: 4rem;
+    font-weight: $fw-sb;
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+    @include themify($themes) {
+      color: themed("darkColor");
+    }
+  }
+
+  &__detail {
+    margin-bottom: 2rem;
+  }
+}
+
+.login-form {
+  .auth-form__back {
+    @include themify($themes) {
+      background: themed("successBackgroundColor") url("/images/login.svg")
+        no-repeat;
+      background-position: center 20%;
+      background-size: 80% auto;
+      padding-top: 70%;
+    }
+  }
+}
+
+.signUp-form {
+  .auth-form__back {
+    @include themify($themes) {
+      background: themed("primaryBackgroundColor") url("/images/signUp.svg")
+        no-repeat center center;
+    }
+  }
+}
+
+.changePass-form {
+  .auth-form__back {
+    @include themify($themes) {
+      background: transparent url("/images/changePass.svg") no-repeat center
+        center;
+    }
+  }
+
+  .auth-form__form {
+    @include themify($themes) {
+      background-color: themed("warningBackgroundColor");
+    }
+  }
+}
+
+.resetPass-form {
+  .auth-form__back {
+    @include themify($themes) {
+      background: transparent url("/images/resetPass.svg") no-repeat center
+        center;
+    }
+  }
+
+  .auth-form__form {
+    @include themify($themes) {
+      background-color: themed("dangerBackgroundColor");
+    }
+  }
+}
+
+@media screen and (min-width: $screen-md-min) {
+  .auth-form {
+    position: relative;
+    > div {
+      position: absolute;
+      height: 100%;
+      @include transition(0.3s);
+    }
+
+    &__form {
+      width: 40%;
+      left: 60%;
+      @include transition(0.3s);
+    }
+
+    &__back {
+      width: 60%;
+      left: 0;
+      @include transition(0.3s);
+      p {
+        width: 7rem;
+        background-color: cyan;
+      }
+    }
+  }
+
+  .login-form {
+    .auth-form__back {
+      @include themify($themes) {
+        background-size: 60% auto;
+        background-position: center center;
+        padding-top: unset;
+      }
+    }
+  }
+
+  .signUp-form {
+    .auth-form__form {
+      left: 0;
+      @include transition(0.3s);
+    }
+
+    .auth-form__back {
+      @include themify($themes) {
+        background-size: 60% auto;
+      }
+      left: 40%;
+      @include transition(0.3s);
+    }
+  }
+
+  .changePass-form {
+    .auth-form__form {
+      width: 60%;
+      left: 0;
+      @include transition(0.3s);
+    }
+    .auth-form__back {
+      @include themify($themes) {
+        background-size: 90% auto;
+        background-position: right bottom;
+      }
+      width: 40%;
+      left: 60%;
+      @include transition(0.3s);
+    }
+  }
+
+  .resetPass-form {
+    .auth-form__back {
+      @include themify($themes) {
+        background-size: 60% auto;
+      }
+    }
+  }
+}

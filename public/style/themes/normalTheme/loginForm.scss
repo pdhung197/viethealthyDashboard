@@ -1,0 +1,45 @@
+/* Login Form styling */
+@import "./../../variables/multithemes.scss";
+@import "./../../variables/commonVariables.scss";
+
+.login-form {
+  &__form {
+    padding: 5rem;
+  }
+
+  &__submit-login {
+    @include themify($themes) {
+      background-color: themed("successBackgroundColor");
+      color: themed("colorWithSuccessBackground");
+    }
+    margin-bottom: 1rem;
+  }
+
+  &__input {
+    label {
+      font-weight: $fw-b;
+      display: block;
+      width: 100%;
+      line-height: 1;
+    }
+    input {
+      display: block;
+      width: 100%;
+      padding: 0.7rem 1rem;
+    }
+  }
+
+  &__remember-forgot {
+    margin: 1.5rem 0;
+    > * {
+      width: auto;
+      padding: 1rem 0;
+    }
+  }
+
+  &__checkbox {
+    label {
+      font-weight: $fw-b;
+    }
+  }
+}

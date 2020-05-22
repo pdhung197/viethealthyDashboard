@@ -8,22 +8,22 @@ $fw-sb: 600;
 $fw-b: 700;
 
 /* Screen size */
-$screen-sm-min: 57.6em;
+$screen-sm-min: 36em;
 
 // Small tablets (portrait view)
-$screen-md-min: 76.8em;
+$screen-md-min: 48em;
 
 // Tablets and small desktops
-$screen-lg-min: 99.2em;
+$screen-lg-min: 62em;
 
 // Large tablets and desktops
-$screen-xl-min: 120em;
+$screen-xl-min: 75em;
 
 // Large tablets and desktops
-$screen-el-min: 144em;
+$screen-el-min: 90em;
 
 // Large tablets and desktops
-$screen-hg-min: 168em;
+$screen-hg-min: 105em;
 
 $breakpoints: (
   xs: $screen-sm-min,

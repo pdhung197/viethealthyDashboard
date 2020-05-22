@@ -2,12 +2,12 @@ import Link from 'next/link'
 
 import NonSecureLayout from './../hocs/defaultPage'
 
-import UserForm from './../containers/UserForm/UserForm'
+import AuthForm from './../containers/AuthForm/AuthForm'
 
 function ChangePass() {
     return (
         <>
-            <UserForm
+            <AuthForm
                 authType="changePass"
             />
             <Link href="/">

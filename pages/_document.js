@@ -8,6 +8,7 @@ export default class CustomDocument extends Document {
         const {
             res: { locals },
         } = ctx;
+
         const additionalProps = {
             languageDirection: locals.languageDirection,
             language: i18n.language,
@@ -26,7 +27,7 @@ export default class CustomDocument extends Document {
                 <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <body className="theme-light">
+            <body className="theme-main">
                 <Main />
                 <NextScript />
             </body>

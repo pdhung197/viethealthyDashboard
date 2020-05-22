@@ -3,11 +3,31 @@
 **Multi theme depending on wrapper
 ==========================================================*/
 $themes: (
-  light: (
-    backgroundColor: #fff,
+  main: (
+    backgroundColor: rgb(103, 184, 104),
+    primaryBackgroundColor: #1e88e5,
+    successBackgroundColor: #7caa2d,
+    warningBackgroundColor: #f5e356,
+    dangerBackgroundColor: #cf3721,
+    colorWithPrimaryBackground: #ffffff,
+    colorWithSuccessBackground: #ffffff,
+    colorWithWarningBackground: #555555,
+    colorWithDangerBackground: #ffffff,
+    darkColor: #000000,
+    lightGrayColor: #bbbbbb,
   ),
   dark: (
-    backgroundColor: #323232,
+    backgroundColor: rgb(103, 184, 104),
+    primaryBackgroundColor: #1e88e5,
+    successBackgroundColor: #7caa2d,
+    warningBackgroundColor: #f5e356,
+    dangerBackgroundColor: #cf3721,
+    colorWithPrimaryBackground: #ffffff,
+    colorWithSuccessBackground: #ffffff,
+    colorWithWarningBackground: #555555,
+    colorWithDangerBackground: #ffffff,
+    darkColor: #000000,
+    lightGrayColor: #bbbbbb,
   ),
 );
 

@@ -2,17 +2,14 @@ import Link from 'next/link'
 
 import NonSecureLayout from './../hocs/defaultPage'
 
-import UserForm from './../containers/UserForm/UserForm'
+import AuthForm from './../containers/AuthForm/AuthForm'
 
 function SignUp() {
     return (
         <>
-            <UserForm
+            <AuthForm
                 authType="signUp"
             />
-            <Link href="/">
-                <a>Home</a>
-            </Link>
         </>
     )
 }
