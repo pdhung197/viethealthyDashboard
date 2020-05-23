@@ -4,7 +4,7 @@
 
 .login-form {
   &__form {
-    padding: 5rem;
+    padding: 1rem;
   }
 
   &__submit-login {
@@ -12,7 +12,7 @@
       background-color: themed("successBackgroundColor");
       color: themed("colorWithSuccessBackground");
     }
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
   }
 
   &__input {
@@ -36,10 +36,81 @@
       padding: 1rem 0;
     }
   }
+}
 
-  &__checkbox {
-    label {
-      font-weight: $fw-b;
+@media screen and (min-width: $screen-sm-min) {
+  .login-form {
+    &__form {
+      padding: 0.5rem 2rem;
+    }
+  }
+}
+
+@media screen and (min-width: $screen-sm-min) and (max-width: $screen-lg-min) and (orientation: landscape),
+  screen and (min-width: $screen-lg-min) {
+  .login-form {
+    &__form {
+      padding: 0.5rem 2rem;
+    }
+
+    &__submit-login {
+      margin-bottom: 1rem;
+    }
+
+    &__input {
+      label {
+        font-weight: $fw-b;
+        display: block;
+        width: 100%;
+        line-height: 1;
+      }
+      input {
+        display: block;
+        width: 100%;
+        padding: 0.7rem 1rem;
+      }
+    }
+
+    &__remember-forgot {
+      margin: 1rem 0;
+      > * {
+        width: auto;
+        padding: 1rem 0;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $screen-lg-min) {
+  .login-form {
+    @include themify($themes) {
+      background-color: themed("lightBackgroundColor");
+    }
+
+    &__form {
+      position: relative;
+      top: 50%;
+      @include transform(translateY(-50%));
+    }
+
+    &__submit-login {
+      margin-bottom: 1.5rem;
+    }
+
+    &__input {
+      input {
+        padding: 1rem;
+      }
+    }
+
+    &__remember-forgot {
+      margin: 1.5rem 0;
+      @include flexbox();
+      @include justify-content(space-between);
+      > * {
+        width: auto;
+        padding: 1.5rem 0;
+      }
     }
   }
 }

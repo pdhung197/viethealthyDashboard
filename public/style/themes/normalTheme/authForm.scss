@@ -14,7 +14,7 @@
     color: themed("colorWithWarningBackground");
   }
   > div {
-    @include transition(0.3s);
+    @include transition(0.5s ease);
   }
 
   &__back {
@@ -102,36 +102,49 @@
   }
 }
 
-@media screen and (min-width: $screen-md-min) {
+@media screen and (min-width: $screen-sm-min) and (max-width: $screen-lg-min) and (orientation: landscape),
+  screen and (min-width: $screen-lg-min) {
   .auth-form {
     position: relative;
+    height: 100vh;
+    overflow: hidden;
     > div {
       position: absolute;
       height: 100%;
-      @include transition(0.3s);
+      @include transition(0.5s ease);
     }
 
     &__form {
-      width: 40%;
-      left: 60%;
-      @include transition(0.3s);
+      overflow: hidden;
+      overflow-y: auto;
+      width: 50%;
+      height: 100%;
+      left: 50%;
+      z-index: 0;
+      @include transition(0.5s ease);
     }
 
     &__back {
-      width: 60%;
+      width: 50%;
       left: 0;
-      @include transition(0.3s);
-      p {
-        width: 7rem;
-        background-color: cyan;
-      }
+      z-index: 1;
+      @include transition(0.5s ease);
+    }
+
+    &__title {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    &__detail {
+      margin-bottom: 1rem;
     }
   }
 
   .login-form {
     .auth-form__back {
       @include themify($themes) {
-        background-size: 60% auto;
+        background-size: 80% auto;
         background-position: center center;
         padding-top: unset;
       }
@@ -141,32 +154,95 @@
   .signUp-form {
     .auth-form__form {
       left: 0;
-      @include transition(0.3s);
+      @include transition(0.5s ease);
     }
 
     .auth-form__back {
       @include themify($themes) {
-        background-size: 60% auto;
+        background-size: 80% auto;
       }
-      left: 40%;
-      @include transition(0.3s);
+      left: 50%;
+      @include transition(0.5s ease);
     }
   }
 
   .changePass-form {
     .auth-form__form {
-      width: 60%;
+      width: 50%;
       left: 0;
-      @include transition(0.3s);
+      @include transition(0.5s ease);
     }
     .auth-form__back {
       @include themify($themes) {
         background-size: 90% auto;
         background-position: right bottom;
       }
+      width: 50%;
+      left: 50%;
+      @include transition(0.5s ease);
+    }
+  }
+
+  .resetPass-form {
+    .auth-form__back {
+      @include themify($themes) {
+        background-size: 80% auto;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $screen-lg-min) {
+  .auth-form {
+    position: relative;
+    background-color: unset;
+
+    &__form {
       width: 40%;
       left: 60%;
-      @include transition(0.3s);
+    }
+
+    &__back {
+      width: 60%;
+    }
+
+    &__title {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+    }
+
+    &__detail {
+      margin-bottom: 2rem;
+    }
+  }
+
+  .login-form {
+    .auth-form__back {
+      @include themify($themes) {
+        background-size: 60% auto;
+      }
+    }
+  }
+
+  .signUp-form {
+    .auth-form__back {
+      @include themify($themes) {
+        background-size: 60% auto;
+      }
+      left: 40%;
+    }
+  }
+
+  .changePass-form {
+    .auth-form__form {
+      width: 60%;
+    }
+    .auth-form__back {
+      @include themify($themes) {
+        background-size: 90% auto;
+      }
+      width: 40%;
+      left: 60%;
     }
   }
 
@@ -178,3 +254,6 @@
     }
   }
 }
+
+/* @media screen and (max-width: $screen-md-min) and (orientation: landscape) {
+} */
