@@ -50,7 +50,10 @@
   screen and (min-width: $screen-lg-min) {
   .login-form {
     &__form {
-      padding: 0.5rem 2rem;
+      position: relative;
+      padding: 0 2rem;
+      top: 50%;
+      @include transform(translateY(-50%));
     }
 
     &__submit-login {
@@ -89,6 +92,7 @@
 
     &__form {
       position: relative;
+      padding: 0 5rem;
       top: 50%;
       @include transform(translateY(-50%));
     }
