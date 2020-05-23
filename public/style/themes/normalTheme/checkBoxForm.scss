@@ -3,7 +3,7 @@
 .checkbox-form {
   &__group {
     position: relative;
-    span {
+    &--fake-checkbox {
       width: 1.6rem;
       height: 1.6rem;
       border: 0.5px solid;
@@ -34,7 +34,7 @@
       visibility: hidden;
       position: absolute;
       &:checked {
-        + span {
+        + .checkbox-form__group--fake-checkbox {
           @include themify($themes) {
             border-color: themed("successBackgroundColor");
           }

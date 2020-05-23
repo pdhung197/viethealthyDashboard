@@ -128,16 +128,16 @@
 @media screen and (min-width: $screen-lg-min) {
   .animation-input-form {
     padding-top: 2.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
 
     label {
       margin-bottom: unset;
-      top: 3.8rem;
+      top: 4.4rem;
       display: block;
     }
 
     input {
-      padding: 1rem;
+      padding: 1.4rem 1rem;
 
       &::placeholder {
         color: transparent;
@@ -145,7 +145,7 @@
     }
 
     &__showpass {
-      bottom: 1.3rem;
+      bottom: 1.5rem;
       right: 0.5rem;
     }
   }
