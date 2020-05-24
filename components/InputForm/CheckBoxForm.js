@@ -22,7 +22,7 @@ function CheckBoxForm(props) {
                 <input
                     {...inputProps}
                 />
-                <span></span>
+                <label className="checkbox-form__group--fake-checkbox" htmlFor={inputProps.id}></label>
                 <label htmlFor={inputProps.id}>{inputProps.label}</label>
             </div>
             {

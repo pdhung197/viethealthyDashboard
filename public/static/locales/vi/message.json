@@ -1,0 +1,9 @@
+{
+    "isRequiredValue": "Vui lòng nhập {{fieldName}}",
+    "firstName": "Tên",
+    "lastName": "Họ và tên lót",
+    "fullName": "Họ và tên",
+    "userName": "Tên đăng nhập",
+    "password": "Mật khẩu",
+    "email": "Địa chỉ email"
+}

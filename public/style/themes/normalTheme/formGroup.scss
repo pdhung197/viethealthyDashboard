@@ -1,0 +1,11 @@
+/* Form group styling */
+
+.form-group {
+  &__invalid {
+    input {
+      @include themify($themes) {
+        border-color: themed("dangerBackgroundColor") !important;
+      }
+    }
+  }
+}

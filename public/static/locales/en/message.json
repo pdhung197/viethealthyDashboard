@@ -1,0 +1,9 @@
+{
+    "isRequiredValue": "{{fieldName}} field is required",
+    "firstName": "First name",
+    "lastName": "Last name",
+    "fullName": "Full name",
+    "userName": "User name",
+    "password": "Password",
+    "email": "Email"
+}
