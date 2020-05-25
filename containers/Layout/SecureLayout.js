@@ -1,12 +1,22 @@
-import React from 'react'
+import React from 'react';
 
-export default function SecureLayout(props) {
+import Header from './../../components/Header/Header';
+import Footer from './../../components/Footer/Footer';
+import Sidebar from './../../components/Sidebar/Sidebar';
+
+function SecureLayout(props) {
     return (
         <>
-            Secured Layout
-            {
-                props.children
-            }
+            <Header />
+            <Sidebar />
+            <section role="main">
+                {
+                    props.children
+                }
+            </section>
+            <Footer />
         </>
     )
 }
+
+export default SecureLayout;

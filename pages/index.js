@@ -5,8 +5,6 @@ import { i18n, withTranslation } from '../i18n'
 
 import SecurePage from './../hocs/securePage';
 
-import Footer from './../components/Footer/Footer'
-
 import { decrementCounter, incrementCounter } from '../redux/actions/counter.actions';
 
 function Home(props) {
@@ -29,13 +27,12 @@ function Home(props) {
       <Link href="/about">
         <a>About</a>
       </Link>
-      <Footer />
     </div>
   );
 }
 
 Home.getInitialProps = async () => ({
-  namespacesRequired: ['common', 'second-page', 'footer'],
+  namespacesRequired: ['common', 'second-page'],
 })
 
 const mapStateToProps = state => ({
@@ -47,6 +44,6 @@ const mapDispatchToProps = {
   decrementCounter: decrementCounter,
 };
 
-const HomePage = SecurePage(withTranslation(['common', 'second-page', 'footer'])(Home));
+const HomePage = SecurePage(withTranslation(['common', 'second-page'])(Home));
 
 export default connect(mapStateToProps, mapDispatchToProps)(HomePage);
